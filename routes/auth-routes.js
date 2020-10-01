@@ -20,7 +20,7 @@ router.get('/logout',(req,res)=>{
 
 // callback for google
 router.get('/google/redirect',passport.authenticate('google'),(req,res)=>{   
-    res.send('you reached the callback URI');
+    res.send(req.user);
 });
 
 module.exports = router;
